@@ -1,0 +1,47 @@
+.note-form {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-inline: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.note-form button {
+  padding: 1rem 1.25rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.note-form button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.note-form button:active {
+  transform: scale(0.98);
+}

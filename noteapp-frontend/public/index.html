@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#7c3aed" />
+
+    <title>Notes App - Organize Your Thoughts</title>
+    <meta name="title" content="Notes App - Organize Your Thoughts" />
+    <meta name="description" content="A beautiful notes application to capture and organize your ideas with light/dark mode support" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" crossorigin="use-credentials" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+          Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .fonts-loaded body {
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+          Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)" />
+
+    <!-- Mobile PWA -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Notes App" />
+
+    <!-- Windows PWA -->
+    <meta name="msapplication-TileColor" content="#7c3aed" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yournotesapp.com/" />
+    <meta property="og:title" content="Notes App - Organize Your Thoughts" />
+    <meta property="og:description" content="A beautiful notes application to capture and organize your ideas with light/dark mode support" />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yournotesapp.com/" />
+    <meta name="twitter:title" content="Notes App - Organize Your Thoughts" />
+    <meta name="twitter:description" content="A beautiful notes application to capture and organize your ideas with light/dark mode support" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/social-preview.png" />
+  </head>
+  <body>
+    <noscript>
+      <div style="text-align: center; margin-top: 50px;">
+        <h1>JavaScript is required to run this application</h1>
+        <p>Please enable JavaScript in your browser settings to continue.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+
+    <script>
+      document.documentElement.classList.add('fonts-loaded');
+
+      // Fix: prevent service worker MIME error in dev mode
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('%PUBLIC_URL%/service-worker.js')
+            .then((registration) => {
+              console.log('SW registered:', registration);
+            })
+            .catch((error) => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

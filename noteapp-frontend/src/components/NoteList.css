@@ -1,0 +1,105 @@
+.note-list {
+  max-width: 700px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.note-list h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+.note-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.note-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #222;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.note-card p {
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+  color: #555;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.note-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.edit-btn {
+  background-color: #1890ff;
+}
+
+.edit-btn:hover {
+  background-color: #1475cc;
+}
+
+.edit-btn:active {
+  transform: scale(0.97);
+}
+
+.delete-btn {
+  background-color: #ff4d4f;
+}
+
+.delete-btn:hover {
+  background-color: #d9363e;
+}
+
+.delete-btn:active {
+  transform: scale(0.97);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+  .note-actions {
+    flex-direction: column;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

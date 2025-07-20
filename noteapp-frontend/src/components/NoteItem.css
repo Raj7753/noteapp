@@ -1,0 +1,72 @@
+.note-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.note-item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.note-item h3 {
+  margin: 0 0 12px 0;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.note-item p {
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.note-item .actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.note-item button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.note-item .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.note-item .delete-btn:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.note-item .edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.note-item .edit-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.note-item button:active {
+  transform: scale(0.97);
+}
